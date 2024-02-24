@@ -94,6 +94,13 @@ gcc -S file.s -o file.o
 ```shell
 # 컴파일 과정 실행
 # -o (file.s) : 실행파일 abc.out을 생선
-gcc main.o -o abc.out
+gcc main.o -o abc
+```
+
+```shell
+# -I 옵션 기능 : 표준 디렉토리가 아닌 위치에 있는 헤더 파일의 디렉토리를 지정한다. 
+# $ gcc 소스파일이름 -I디렉토리 이름
+
+gcc main.o -o abc
 ```
 
