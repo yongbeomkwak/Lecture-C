@@ -103,7 +103,7 @@ int main()
 
 ~~~
 
-<br>
+<br><br><br>
 
 ## 2. 실수자료형
 
@@ -119,7 +119,7 @@ int main()
 
 <img src ="https://github.com/yongbeomkwak/Lecture-C/assets/48616183/671b9e41-13a0-4507-904b-338128fc56c6">
 
-<br>
+<br><br>
 
 컴퓨터에서는 값을 0과 1로 저장합니다. 그래서 실수도 0과 1로 저장해야 하는데 이렇게 실수와 소수점을 2진수로 표현하는 방식을 부동소수점 표현 방식이라고 합니다. 
 
@@ -137,9 +137,7 @@ p가 양수면 정수, p가 음수면 소수
 <br>
 
 <table align ="center">
-  <caption>
-    부동소수점 저장 방식
-  </caption>
+
   <thead>
     <tr>
       <th scope="col">자료형</th>
@@ -248,6 +246,78 @@ int main()
     printf("%e %e\n", num3, num4);         // 2.225074e-308 1.797693e+308
     printf("%Le %Le\n", num5, num6);       // 2.225074e-308 1.797693e+308
  
+    return 0;
+}
+
+~~~
+
+<br><br><br>
+
+## 문자 자료형
+
+### 특징
+
+- C 언어에서는 정수 자료형인 char를 이용하여 문자 한 개를 저장합니다. 다음은 문자 자료형의 크기와 저장할 수 있는 범위입니다.
+
+<br>
+
+<img src = "https://github.com/yongbeomkwak/Lecture-C/assets/48616183/f92a458e-7ff8-4ce7-8b28-69d97bc4c907">
+
+<br>
+
+char에 문자를 저장할 때는 문자 자체를 저장하는 것이 아니라 문자에 해당하는 정숫값을 저장하게 됩니다.
+
+```c
+
+int main()
+{
+
+    // C 언어에서 문자는 ' ' (작은따옴표)로 묶어서 표현합니다.
+
+    char c1 = 'a';    // 문자 변수를 선언하고 문자 a를 저장
+    char c2 = 'b';    // 문자 변수를 선언하고 문자 b를 저장
+ 
+    // char를 %c로 출력하면 문자가 출력되고, %d로 출력하면 정숫값이 출력됨
+    printf("%c, %d\n", c1, c1);    // a, 97: a의 ASCII 코드값은 97
+    printf("%c, %d\n", c2, c2);    // b, 98: b의 ASCII 코드값은 98
+
+
+    printf("%c %d\n", 'a' + 1, 'a' + 1);    // b 98: a는 ASCII 코드값 97이고, 
+                                            // 97에 1을 더하여 98이 되었으므로 b가 출력됨
+
+    printf("%c %d\n", 97 + 1, 97 + 1);      // b 98: ASCII 코드값 97에 1을 더하여 98이 되었으므로 
+                                            // b가 출력됨
+ 
+    return 0;
+}
+```
+
+<br><br><br>
+
+## 불 자료형 
+
+### 특징
+
+- 참과 거짓을 나타내는 자료형, 크기가 1이므로 굉장히 효율적
+
+
+~~~c
+
+#include <stdio.h>
+#include <stdbool.h>    // bool, true, false가 정의된 헤더 파일
+ 
+int main()
+{
+    printf("%d\n", true && true);      // 1: true AND true는 1
+    printf("%d\n", true && false);     // 0: true AND false는 0
+    printf("%d\n", false && true);     // 0: false AND true는 0
+    printf("%d\n", false && false);    // 0: false AND false는 0
+ 
+    printf("%d\n", true || true);      // 1: true OR true는 1
+    printf("%d\n", true || false);     // 1: true OR false는 1
+    printf("%d\n", false || true);     // 1: false OR true는 1
+    printf("%d\n", false || false);    // 0: false OR false는 0
+
     return 0;
 }
 
