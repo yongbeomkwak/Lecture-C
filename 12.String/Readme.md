@@ -144,4 +144,5 @@ scanf에서 서식 지정자 %s로 문자열을 저장할 때 입력된 문자�
 예를 들어 중간에 공백이 있는 Hello, world!를 입력하면 Hello,까지만 저장됩니다
 
 <br>
+
 ### [string.h 관련 참고자료](https://modoocode.com/76)
